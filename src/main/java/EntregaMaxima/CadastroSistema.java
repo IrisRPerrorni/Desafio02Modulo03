@@ -219,25 +219,21 @@ public class CadastroSistema {
     }
 
     public void pesquisarVendaVendedorEmail(String email){
+        pedidosporVendedor.clear();
         for (Pedido pedido : pedidos){
             if (pedido.getVendedor() != null && pedido.getVendedor().getEmail().equalsIgnoreCase(email)){
                 pedidosporVendedor.add(pedido);
-
-
             }
         }
 
     }
 
     public void exibirVendasCLientes(){
+        pedidosporClientes.clear();
         for (Pedido pedido : pedidosporVendedor){
             String saida = pedido.toString();
             System.out.println(saida);
         }
     }
-
-
-
-
 }
 

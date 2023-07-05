@@ -134,7 +134,7 @@ public class Teste {
                     email = entrada.next();
                     cadastroSistema.pesquisarVendaVendedorEmail(email);
                     cadastroSistema.exibirVendasCLientes();
-
+                    break;
 
                 case 9:
                     System.out.println("\n++++++++Saindo++++++++\n");
