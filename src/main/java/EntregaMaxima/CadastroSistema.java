@@ -202,6 +202,7 @@ public class CadastroSistema {
         return null;
     }
     public void pesquisarCompraPorCLienteCPF(String cpfCliente){
+        pedidosporClientes.clear();
         for (Pedido pedido : pedidos){
             if (pedido.getCliente() != null && pedido.getCliente().getCpf().equalsIgnoreCase(cpfCliente)){
                 pedidosporClientes.add(pedido);
@@ -229,7 +230,7 @@ public class CadastroSistema {
     }
 
     public void exibirVendasCLientes(){
-        pedidosporClientes.clear();
+
         for (Pedido pedido : pedidosporVendedor){
             String saida = pedido.toString();
             System.out.println(saida);
